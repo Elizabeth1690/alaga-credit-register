@@ -26,11 +26,11 @@ const SelectEconomicActivities: React.FC<SelectEconomicActivitiesProps> = ({ val
 
   return (
     <div className="mb-4">
-      <label htmlFor="economic-activity" className="block text-sm font-medium text-gray-700">
-        Actividad Económica
+      <label htmlFor="economic-activities" className="block text-sm font-medium text-gray-700">
+        Actividades Económicas
       </label>
       <Select
-        id="economic-activity"
+        id="economic-activities"
         isMulti
         value={value}
         onChange={(selectedOptions) => onChange(selectedOptions as OptionType[])}

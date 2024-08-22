@@ -1,4 +1,4 @@
-"use client"; // Asegura que este componente se ejecute en el cliente
+"use client";
 
 import React from 'react';
 import Select from 'react-select';
@@ -46,7 +46,7 @@ const SelectPersonalTelephone: React.FC = () => {
   return (
     <div className="mb-4">
       <label className="block text-sm font-medium text-gray-700">
-       Teléfono personal
+        Teléfono personal
       </label>
       <Select
         options={options}
