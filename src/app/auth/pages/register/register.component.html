@@ -1,0 +1,172 @@
+<div class="min-h-screen flex flex-col items-center justify-center bg-gray-100">
+  <div
+    class="flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-3xl w-50 max-w-md"
+  >
+    <div class="font-medium self-center text-xl sm:text-3xl text-gray-800">
+      ¡Regístrate
+    </div>
+    <div class="mt-4 self-center text-xl sm:text-sm text-gray-800">
+      Da el primer paso y solicíta un crédito para tu Mipyme.
+    </div>
+    <div class="mt-4 self-center text-xl sm:text-sm text-gray-800">
+      Diligencia los siguientes campos:
+    </div>
+
+    <div class="mt-10">
+      <form action="#">
+        <div class="flex flex-col mb-5">
+          <label for="email" class="mb-1 text-xs tracking-wide text-gray-600"
+            >Nit de tu empresa*</label
+          >
+          <div class="relative">
+            <div
+              class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400"
+            >
+              <i class="fas fa-user text-blue-500"></i>
+            </div>
+
+            <input
+              id="nit"
+              [(ngModel)]="nit"
+              type="text"
+              name="nit"
+              required="required"
+              class="text-sm placeholder-gray-500 pl-10 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400"
+              placeholder="Imgresa tu nit"
+            />
+          </div>
+        </div>
+        <div class="flex flex-col mb-5">
+          <label for="email" class="mb-1 text-xs tracking-wide text-gray-600"
+            >Correo de tu empresa*</label
+          >
+          <div class="relative">
+            <div
+              class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400"
+            >
+              <i class="fas fa-at text-blue-500"></i>
+            </div>
+
+            <input
+              id="email"
+              [(ngModel)]="email"
+              type="email"
+              name="email"
+              class="text-sm placeholder-gray-500 pl-10 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400"
+              placeholder="Ingresa tu correo eletrónico"
+            />
+          </div>
+        </div>
+
+        <div class="flex flex-col mb-5">
+          <label for="email" class="mb-1 text-xs tracking-wide text-gray-600"
+            >Número de celular*</label
+          >
+          <div class="relative">
+            <div
+              class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400"
+            >
+              <i class="fas fa-at text-blue-500"></i>
+            </div>
+
+            <input
+              id="phone"
+              [(ngModel)]="phone"
+              type="tel"
+              name="phone"
+              class="text-sm placeholder-gray-500 pl-10 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400"
+              placeholder="Ingresa tu número de celular"
+            />
+          </div>
+        </div>
+
+        <div class="flex flex-col mb-6">
+          <label
+            for="password"
+            class="mb-1 text-xs sm:text-sm tracking-wide text-gray-600"
+            >Crea tu contraseña*</label
+          >
+          <div class="relative">
+            <div
+              class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400"
+            >
+              <span>
+                <i class="fas fa-lock text-blue-500"></i>
+              </span>
+            </div>
+
+            <input
+              id="password"
+              [(ngModel)]="password"
+              type="password"
+              name="password"
+              class="text-sm placeholder-gray-500 pl-10 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400"
+              placeholder="Ingresa tu contraseña"
+            />
+          </div>
+        </div>
+
+        <div class="flex flex-col mb-6">
+          <label
+            for="password"
+            class="mb-1 text-xs sm:text-sm tracking-wide text-gray-600"
+            >Repite tu contraseña*</label
+          >
+          <div class="relative">
+            <div
+              class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400"
+            >
+              <span>
+                <i class="fas fa-lock text-blue-500"></i>
+              </span>
+            </div>
+
+            <input
+              id="confirmPassword"
+              [(ngModel)]="confirmPassword"
+              type="password"
+              name="confirmPassword"
+              class="text-sm placeholder-gray-500 pl-10 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400"
+              placeholder="Repite tu contraseña"
+            />
+          </div>
+        </div>
+
+        <div class="flex items-center mb-4">
+          <input
+            id="termsAccepted"
+            [(ngModel)]="termsAccepted"
+            name="termsAccepted"
+            type="checkbox"
+            class="h-5 w-5 text-blue-600 focus:ring-blue-500 border-blue-500 rounded bg-blue-500"
+          />
+          <label for="termsAccepted" class="ml-2 text-sm text-gray-600"
+            >Autorización de los términos y condiciones de la plataforma</label
+          >
+        </div>
+        <div class="flex items-center mb-6">
+          <input
+            id="dataProcessingAccepted"
+            [(ngModel)]="dataProcessingAccepted"
+            name="dataProcessingAccepted"
+            type="checkbox"
+            class="h-5 w-5 text-blue-600 focus:ring-blue-500 border-blue-500 rounded bg-blue-500"
+          />
+          <label for="dataProcessingAccepted" class="ml-2 text-sm text-gray-600"
+            >Autorización de tratamiento de datos</label
+          >
+        </div>
+        <div class="flex w-full">
+          <button
+            id="bg-btn"
+            type="submit"
+            (click)="onSubmit()"
+            class="flex mt-2 items-center justify-center focus:outline-none text-sm sm:text-base rounded-2xl py-2 w-full transition duration-150 ease-in"
+          >
+            <span class="mr-2">Ingresar</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
